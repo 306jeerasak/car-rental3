@@ -7,6 +7,83 @@ body {
 }
 
 .container {
+  background-color: rgba(255, 255, 255, 0.9); /* สีพื้นหลังของกล่องเนื้อหาแบบโปร่งใสเล็กน้อย */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กล่องเนื้อหา */
+}
+@media (max-width: 768px) {
+  body {
+    background-position: center top;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-position: center top;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-section {
+  background: url('https://content.r9cdn.net/rimg/dimg/c2/8b/cb925cf8-ctry-238-164f66c5a10.jpg?width=1366&height=768&xhint=1442&yhint=947&crop=true') no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.date-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8); /* เพิ่มความโปร่งใสเพื่อเห็นพื้นหลัง */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.date-select {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.date-select input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.app-title {
+  color: #ff4500;
+}
+
+
+
+
+
+body {
+  background-color: #f0f0f0; /* สีเทาอ่อน */
+  margin: 0; /* กำจัด margin ของ body */
+  padding: 0; /* กำจัด padding ของ body */
+  font-family: Arial, sans-serif;
+}
+
+.container {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
@@ -127,12 +204,29 @@ button {
   align-self: flex-end; /* ดันปุ่มไปทางขวา */
 }
 
+.title-section {
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  margin: 20px 0; /* เพิ่ม margin ด้านบนและล่าง */
+}
+
+
 .car-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 คอลัมน์สำหรับหน้าจอใหญ่ */
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ปรับให้แสดงผลเป็นหลายคอลัมน์ตามขนาดการ์ด */
+  gap: 20px; /* ระยะห่างระหว่างการ์ด */
+  padding: 20px; /* ระยะห่างระหว่างการ์ดและขอบจอ */
+  max-width: 1200px; /* กำหนดความกว้างสูงสุดของส่วนการ์ด */
+  margin: 0 auto; /* จัดการ์ดให้อยู่ตรงกลาง */
+  margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
 }
+
+.info-section {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #000000;
+}
+
 
 @media (max-width: 768px) {
   .car-list {
