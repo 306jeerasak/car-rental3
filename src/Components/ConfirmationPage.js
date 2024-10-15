@@ -16,7 +16,6 @@ function ConfirmationPage() {
       <h1>Booking Confirmation</h1>
       <p>Thank you for booking with us!</p>
       <p>Car: {car.name}</p> {/* ใช้ car.name แทน */}
-      <p>Booking Number: {bookingNumber}</p> {/* เพิ่มหมายเลขการจอง */}
       <p>Rental Dates: {rentalStartDate} to {rentalEndDate}</p>
       <p>Total Days: {totalDays}</p>
       <p>Total Price: {totalPrice} THB</p>
