@@ -10,8 +10,7 @@ import LoginPage from './Components/LoginPage';
 import ProtectedRoute from './Components/ProtectedRoute';
 import './App.css';
 
-
-
+// Component สำหรับแสดงข้อมูลรถ
 function CarItem({ name, price, seats, image, rentalStartDate, rentalEndDate }) {
   const navigate = useNavigate();
 
@@ -20,6 +19,7 @@ function CarItem({ name, price, seats, image, rentalStartDate, rentalEndDate }) 
   };
 
   return (
+    
     <div className="car-item">
       <img src={image} alt={name} />
       <h3>{name}</h3>
@@ -95,18 +95,36 @@ function App() {
       seats: "2",
       image: "https://purepng.com/public/uploads/large/purepng.com-white-lamborghini-huracan-carcarvehicletransportlamborghini-9615246466125cdzx.png"
     },
+    {
+      name: "Toyota Yaris Cross",
+      price: 1232,
+      seats: "4",
+      image: "https://content.r9cdn.net/rimg/car-images/generic/05_suv-small_black.png?width=120&height=80"
+    },
+    {
+      name: "Mitsubishi Outlander",
+      price: 1352,
+      seats: "5",
+      image: "https://content.r9cdn.net/rimg/car-images/generic/06_suv-medium_white.png?width=120&height=80"
+    },
   ];
 
   return (
     <div className="App">
-      <TopBar
-        rentalStartDate={rentalStartDate}
-        setRentalStartDate={setRentalStartDate}
-        rentalEndDate={rentalEndDate}
-        setRentalEndDate={setRentalEndDate}
-      />
+      <div className="header-section"> 
+        <TopBar
+          rentalStartDate={rentalStartDate}
+          setRentalStartDate={setRentalStartDate}
+          rentalEndDate={rentalEndDate}
+          setRentalEndDate={setRentalEndDate}
+        />
+      </div>
+  
       <div className="main-content">
         <SearchBar />
+        <div className="info-section">
+      <h2>รถเช่าในเชียงใหม่ เริ่มต้นที่ ฿557/วัน</h2>
+        </div>
         <div className="car-list">
           {cars.map((car) => (
             <CarItem
@@ -120,7 +138,7 @@ function App() {
             />
           ))}
         </div>
-      </div>
+      </div>  
 
       {/* เพิ่มส่วนข้อความด้านล่าง */}
       <div className="additional-info">
